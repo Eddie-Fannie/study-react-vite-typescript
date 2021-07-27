@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './Clock';
+import NumberList from './List';
+import NameForm from './Form';
+
+const numbers = [1, 2, 3, 4, 5];
 
 const App: React.FC = () => { // 函数式组件FunctionComponent
   const [count, setCount] = useState(0);
@@ -16,7 +20,9 @@ const App: React.FC = () => { // 函数式组件FunctionComponent
             count is: {count}
           </button>
         </p>
+        <NumberList numbers={numbers} />
         <Clock />
+        <NameForm />
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>

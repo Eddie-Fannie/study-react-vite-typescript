@@ -5,7 +5,7 @@ class Clock extends React.Component {
   constructor(props) {
     super(props);
     this.state = { date: new Date() };
-    this.testClick = this.testClick.bind(this);
+    // this.testClick = this.testClick.bind(this);
   }
   componentDidMount() {
     this.timerID = setInterval(
@@ -30,7 +30,7 @@ class Clock extends React.Component {
       <div>
         <h1>Hello, React!</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}</h2>
-        <h3 onClick={this.testClick}>点击一下</h3>
+        <h3 onClick={(e) => {this.testClick(e); console.log(this);}}>点击一下</h3>
       </div>
     );
   }
