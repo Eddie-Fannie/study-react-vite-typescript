@@ -4,6 +4,7 @@ import './App.css';
 import Clock from './Clock';
 import NumberList from './List';
 import NameForm from './Form';
+import FlavorForm from './Select';
 
 const numbers = [1, 2, 3, 4, 5];
 
@@ -23,6 +24,7 @@ const App: React.FC = () => { // 函数式组件FunctionComponent
         <NumberList numbers={numbers} />
         <Clock />
         <NameForm />
+        <FlavorForm />
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
